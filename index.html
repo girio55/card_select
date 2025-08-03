@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>クリックゲーム</title>
+  <style>
+    body { text-align: center; font-family: sans-serif; }
+    #score { font-size: 2em; margin: 20px; }
+    #btn { font-size: 2em; padding: 20px 50px; }
+  </style>
+</head>
+<body>
+  <h1>クリックゲーム</h1>
+  <p>ボタンをできるだけたくさんクリックしよう！</p>
+  <div id="score">0</div>
+  <button id="btn">クリック！</button>
+  <script>
+    let score = 0;
+    const scoreDiv = document.getElementById('score');
+    const btn = document.getElementById('btn');
+
+    btn.onclick = function() {
+      score++;
+      scoreDiv.textContent = score;
+    };
+  </script>
+</body>
+</html>
